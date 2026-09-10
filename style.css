@@ -1,9 +1,4 @@
-html{
-     background-color: beige;
-}
-
-p{
-
-    font-style: large
-    ;
+table td.low-rating{
+  color: red; 
+  font-style: italic;  
 }

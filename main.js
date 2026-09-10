@@ -91,12 +91,29 @@ const filmek = [
   }
 ];
  
-for (const film of filmek)
-{const row = document.createElement("tr");
-  row.innerHTML =  `
-    <td>${film.title}</td>
-    <td>${film.year}</td>
-    <td>${film.genre}</td>
-    <td>${film.rating}</td>
-  `;
-  document.getElementById("filmtable").appendChild(row); }
+for (const film of filmek) {
+  const tr = document.createElement("tr");
+ 
+  const tdtitle = document.createElement("td");
+  tdtitle.textContent = film.title;
+  tr.appendChild(tdtitle);
+ 
+  const tdyear = document.createElement("td");
+  tdyear.textContent = film.year;
+  tr.appendChild(tdyear);
+ 
+  const tdgenre = document.createElement("td");
+  tdgenre.textContent = film.genre;
+  tr.appendChild(tdgenre);
+ 
+  const tdrating = document.createElement("td");
+  tdrating.textContent = film.rating;
+  if (film.rating <= 2) {
+    tr.appendChild(tdrating).className = "low-rating";
+  }
+  else {
+    tr.appendChild(tdrating);
+  }
+  document.getElementById("filmbody").appendChild(tr);
+}
+ 
