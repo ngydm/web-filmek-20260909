@@ -90,3 +90,13 @@ const filmek = [
     "rating": 5
   }
 ];
+ 
+for (const film of filmek)
+{const row = document.createElement("tr");
+  row.innerHTML =  `
+    <td>${film.title}</td>
+    <td>${film.year}</td>
+    <td>${film.genre}</td>
+    <td>${film.rating}</td>
+  `;
+  document.getElementById("filmtable").appendChild(row); }
