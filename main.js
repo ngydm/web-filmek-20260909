@@ -90,7 +90,7 @@ const filmek = [
     "rating": 5
   }
 ];
- 
+
 for (const film of filmek) {
   const tr = document.createElement("tr");
  
@@ -105,15 +105,39 @@ for (const film of filmek) {
   const tdgenre = document.createElement("td");
   tdgenre.textContent = film.genre;
   tr.appendChild(tdgenre);
- 
+
   const tdrating = document.createElement("td");
-  tdrating.textContent = film.rating;
   if (film.rating <= 2) {
     tr.appendChild(tdrating).className = "low-rating";
+      for (let i = 0; i < film.rating; i++ )
+    {
+      tdrating.textContent += "⭐";
+    }
   }
   else {
-    tr.appendChild(tdrating);
+    tr.appendChild(tdrating)
+    for (let i = 0; i < film.rating; i++ )
+    {
+      tdrating.textContent += "⭐";
+    }
   }
   document.getElementById("filmbody").appendChild(tr);
 }
- 
+const form = document.getElementById('myForm');
+  function updateFilmtable(){
+  
+    form.addEventListener('submit',(e) =>{});
+    const data = new FormData(form)
+    const title = data.get("title").toString();
+    const year = parseInt(data.get("year"));
+    const genre = data.get("genre").toString();
+    const rating = parseInt(data.get("rating"));}
+    
+    filmek.push 
+    {
+      "title";title,
+      "year"; year,
+      "genre"; genre,
+      "rating"; rating
+    }
+

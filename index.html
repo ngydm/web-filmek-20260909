@@ -17,5 +17,32 @@
     </table>
     
     <script src="main.js"></script>
+
+    <h2>Film hozzáadás</h2>
+
+<p id="FilmAdd" style="font-size:40px;">hozzáad</p>
+<form id="myForm" action="/action_page.php">
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Title</label>
+    <input class="form-control" id="Title" placeholder="Enter Title">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Year</label>
+    <input class="form-control" id="Year" placeholder="Enter Year">
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Genre</label>
+    <input class="form-control" id="Genre" placeholder="Enter Genre">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Rating</label>
+    <input class="form-control" id="Rating" placeholder="Enter Rating">
+  </div>
+  </form>
+
+<button onclick="updateFilmtable()">Add film</button>
+
+<script src="main.js"></script>
+
 </body>
 </html>
